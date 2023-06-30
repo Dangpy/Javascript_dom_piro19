@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위바위보 게임 만들기</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1>piro19의 가위바위보 게임</h1></header>
+    <section class="score-board">
+      <div id="user" class="name">유저</div>
+      <div id="computer" class="name">피로봇</div>
+      <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </section>
+    <section class="game-over"><p>축하합니다! 피로봇을 이겼네요!</p></section>
+
+    <section class="game-board">
+      <div class="choice" id="rock">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1527/1527445.png"
+          alt="주먹"
+        />
+      </div>
+      <div class="choice" id="scissors">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/4151/4151780.png"
+          alt="가위"
+        />
+      </div>
+      <div class="choice" id="paper">
+        <img
+          src="https://img.freepik.com/free-icon/stop_318-926174.jpg"
+          alt="보"
+        />
+      </div>
+    </section>
+    <p class="action-message">당신의 차례입니다!</p>
+  </body>
+</html>
