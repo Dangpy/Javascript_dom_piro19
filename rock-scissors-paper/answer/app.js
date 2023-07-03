@@ -11,8 +11,6 @@ const scissors = document.getElementById("scissors");
 const paper = document.getElementById("paper");
 
 function getComputerChoice() {
-  //   console.log(Math.random() * 3);
-  //   console.log(Math.floor(Math.random() * 3));
   const choices = ["rock", "scissors", "paper"];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
@@ -39,12 +37,6 @@ function win(userChoice, computerChoice) {
   if (userScore === 5) {
     endGame();
   }
-
-  //   console.log(user);
-  //   console.log(computer);
-
-  //   console.log("당신이 이겼어요!");
-  //   console.log(userScore);
 }
 
 function lose(userChoice, computerChoice) {
@@ -67,7 +59,6 @@ function lose(userChoice, computerChoice) {
   if (computerScore === 5) {
     endGame();
   }
-  // console.log("당신이 졌어요..");
 }
 
 function draw(userChoice, computerChoice) {
@@ -83,7 +74,6 @@ function draw(userChoice, computerChoice) {
   setTimeout(function () {
     document.getElementById(userChoice).classList.remove("blue-glow");
   }, 500);
-  // console.log("으잉? 비겼네요!");
 }
 
 function game(userChoice) {
@@ -93,27 +83,19 @@ function game(userChoice) {
     case "rockscissors":
     case "paperrock":
     case "scissorspaper":
-      //   console.log("당신이 이겼어요!");
       win(userChoice, computerChoice);
       break;
     case "rockpaper":
     case "paperscissors":
     case "scissorsrock":
-      //   console.log("당신이 졌어요..");
       lose(userChoice, computerChoice);
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
-      //   console.log("으잉? 비겼네요!");
       draw(userChoice, computerChoice);
       break;
   }
-
-  //   console.log("user choice = >" + userChoice);
-  //   console.log("computer choice = >" + computerChoice);
-
-  //   console.log("💩" + userChoice);
 }
 
 function main() {
@@ -131,13 +113,3 @@ function main() {
 }
 
 main();
-
-//가위바위보 끝 승리 모달!
-function endGame() {
-  if (userScore === 5) {
-    alert("당신이 최종 승자입니다!");
-  } else if (computerScore === 5) {
-    alert("피로봇에게 패배하셨습니다!");
-  }
-}
-//개선점: 5점이 뜨고 없어져야하고, alert 닫으면 초기화 해야함
